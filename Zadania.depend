@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1473265199 source:d:\workspaces\codeblocks\cc++\zadania\zadania\main.cpp
+	<iostream>
+
+1473265339 source:d:\workspaces\codeblocks\cc++\zadania\zadania\egz1.1.cpp
+	<iostream>
+	<string>
+
+1473265348 source:d:\workspaces\codeblocks\cc++\zadania\zadania\egz1.2.cpp
+	<iostream>
+	<string>
+
+1473265170 d:\workspaces\codeblocks\cc++\zadania\zadania\global.hpp
+	<iostream>
+	<string>
+
+1473265365 source:d:\workspaces\codeblocks\cc++\zadania\zadania\global.cpp
+	<iostream>
+	<string>
+
