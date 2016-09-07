@@ -5,6 +5,7 @@ using namespace std;
 
 void wyswietlGwiazdki();
 void main12();
+static void inkrementujLicznik();
 
 /**
 * Moja klasa zawierajaca m.in. konstruktor, destruktor.
@@ -15,27 +16,35 @@ private:
     string imie;
     string nazwisko;
     int wiek;
+
+    int * wskaznikDoWieku;
+
 public:
+    static int licznik;
     // Konstruktor domniemany - nie ma nigdy ¿adnych argumentów
     MojaKlasa()
     {
         imie = "";
         nazwisko = "";
         wiek = 0;
+        wskaznikDoWieku = &wiek;
     }
     MojaKlasa(string imie, string nazwisko, int wiek)
     {
         this->imie = imie;
         this->nazwisko = nazwisko;
         this->wiek = wiek;
+        wskaznikDoWieku = &(this->wiek);
+        inkrementujLicznik();
     }
 
     // Konstruktor kopiuj¹cy
-    MojaKlasa(const MojaKlasa & mojaKlasa)
+    MojaKlasa(MojaKlasa & mojaKlasa)
     {
+        cout << "W konstruktorze kopiujacym" << endl;
         imie = mojaKlasa.imie;
         nazwisko = mojaKlasa.nazwisko;
-        wiek = mojaKlasa.wiek;
+        wiek = 50;
     }
 
     /**
@@ -75,22 +84,56 @@ public:
     {
         delete this;
     }
+
+    void ustawWiekPoprzezWskaznik(int nowyWiek)
+    {
+        *wskaznikDoWieku = nowyWiek;
+    }
 };
+
+// zdefiniowanie zmiennej statycznej
+int MojaKlasa::licznik = 0;
+
+// definicja metody statycznej
+static void inkrementujLicznik()
+{
+    MojaKlasa::licznik++;
+}
+
+// definicja metody statycznej
+static void wyswietlLicznik()
+{
+    cout << "Stan licznika: " << MojaKlasa::licznik << endl;
+}
 
 void main12()
 {
-    MojaKlasa * mojaKlasa = new MojaKlasa("Adam", "Nowak", 25);
+    wyswietlLicznik();
+
+    MojaKlasa mojaKlasa("Adam", "Nowak", 25);
+    wyswietlLicznik();
     wyswietlGwiazdki();
-    mojaKlasa->wyswietlDane();
+    mojaKlasa.wyswietlDane();
     wyswietlGwiazdki();
 
-    MojaKlasa * mojaKlasa2 = mojaKlasa;
-    mojaKlasa2->wyswietlDane();
+    cout << "Kopiowanie obiektu" << endl;
+    wyswietlLicznik();
+    MojaKlasa mojaKlasaKopia = mojaKlasa;
+    wyswietlLicznik();
+    mojaKlasaKopia.wyswietlDane();
     wyswietlGwiazdki();
 
-    mojaKlasa->usunObiekt();
-    // delete mojaKlasa; // rowniez powoduje uruchomienie destrktora
-    mojaKlasa2->usunObiekt();
+    MojaKlasa * nowaMojaKlasa = new MojaKlasa("Ania", "Kowalska", 24);
+    wyswietlLicznik();
+    nowaMojaKlasa->wyswietlDane();
+    wyswietlGwiazdki();
+    nowaMojaKlasa->usunObiekt();
+
+
+    cout << "WSKAZNIKI" << endl;
+    wyswietlGwiazdki();
+    mojaKlasa.ustawWiekPoprzezWskaznik(60);
+    mojaKlasa.wyswietlDane();
 
 }
 
