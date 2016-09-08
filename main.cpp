@@ -14,6 +14,6 @@ void main1z2();
 
 int main()
 {
-    main1z2();
+    main11();
     return 0;
 }

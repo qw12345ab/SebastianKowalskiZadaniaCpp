@@ -29,11 +29,8 @@ public:
         wiek = 0;
         wskaznikDoWieku = &wiek;
     }
-    MojaKlasa(string imie, string nazwisko, int wiek)
+    MojaKlasa(string imie, string nazwisko, int wiek) : imie(imie), nazwisko(nazwisko), wiek(wiek)
     {
-        this->imie = imie;
-        this->nazwisko = nazwisko;
-        this->wiek = wiek;
         wskaznikDoWieku = &(this->wiek);
         inkrementujLicznik();
     }
