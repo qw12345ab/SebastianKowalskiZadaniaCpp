@@ -5,9 +5,10 @@ using namespace std;
 void main11();
 void main12();
 void main13();
+void main14();
 
 int main()
 {
-    main13();
+    main14();
     return 0;
 }
