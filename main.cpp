@@ -9,8 +9,11 @@ void main14();
 void main15();
 void main16();
 
+void main1z1();
+void main1z2();
+
 int main()
 {
-    main16();
+    main1z2();
     return 0;
 }

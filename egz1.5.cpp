@@ -53,7 +53,7 @@ class Suma
 public:
 
     // Konstruktor obliczeniowy
-    Suma(Zespolona zes1, Zespolona zes2)
+    Suma(Zespolona & zes1, Zespolona & zes2)
     {
         zespolonaSuma = zes1 + zes2;
     }

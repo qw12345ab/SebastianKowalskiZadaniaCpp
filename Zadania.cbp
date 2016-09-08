@@ -47,6 +47,12 @@
 		</Compiler>
 		<Unit filename="egz1.1.cpp" />
 		<Unit filename="egz1.2.cpp" />
+		<Unit filename="egz1.3.cpp" />
+		<Unit filename="egz1.4.cpp" />
+		<Unit filename="egz1.5.cpp" />
+		<Unit filename="egz1.6.cpp" />
+		<Unit filename="egz1zad1.cpp" />
+		<Unit filename="egz1zad2.cpp" />
 		<Unit filename="global.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

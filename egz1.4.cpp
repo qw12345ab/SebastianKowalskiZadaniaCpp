@@ -24,7 +24,9 @@ public:
         this->rocznik = rocznik;
         this->informacjeDodatkowe = informacjeDodatkowe;
     }
-    ~Samochod() {}
+
+    // destruktor wirtualny
+    virtual ~Samochod() {}
 
     void ustawMarke(string marka)
     {
