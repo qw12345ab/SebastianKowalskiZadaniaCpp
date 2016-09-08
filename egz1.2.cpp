@@ -42,8 +42,8 @@ public:
     MojaKlasa(MojaKlasa & mojaKlasa)
     {
         cout << "W konstruktorze kopiujacym" << endl;
-        imie = mojaKlasa.imie;
-        nazwisko = mojaKlasa.nazwisko;
+        imie = mojaKlasa.zwrocImie();
+        nazwisko = mojaKlasa.zwrocNazwisko();
         wiek = 50;
     }
 
