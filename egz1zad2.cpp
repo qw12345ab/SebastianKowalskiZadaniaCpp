@@ -17,7 +17,7 @@ class Y : public X
 public:
     virtual f(void){}
     f1(void){};
-}y, *py;
+} y, *py;
 
 ///////////////////////////////////////////////
 

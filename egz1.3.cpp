@@ -76,7 +76,7 @@ public:
         return wektor;
     }
 
-    Wektor & operator --()
+    Wektor & operator--()
     {
         this->x--;
         this->y--;

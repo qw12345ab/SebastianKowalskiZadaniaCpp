@@ -63,6 +63,7 @@ public:
         ustawRocznik(rocznik);
         ustawInformacjeDodatkowe(informacjeDodatkowe);
     };
+
     ~Opel(){}
 
     void usunObiekt()

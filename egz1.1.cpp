@@ -64,6 +64,15 @@ void main11()
     cout << "Zmienna string: " << zmiennaA.getZmiennaString() << endl;
 
     wyswietlGwiazdki();
+
+    double aaaa = 3.2;
+    float bbb = aaaa;
+    int ccc = bbb;
+
+    ccc = aaaa;
+
+    cout << ccc << endl;
+
 }
 
 
